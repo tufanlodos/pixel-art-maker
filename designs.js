@@ -37,10 +37,9 @@ function makeGrid() {
   };
 
   //click ile cell in background-color ı colorValue olacak
-
   document.querySelector('#pixelCanvas').addEventListener('click', function (evt) {
     if (evt.target.nodeName === 'TD') {  // ← verifies target is desired element
       // set the cell to the picked color
-      event.target.bgColor = colorValue;
+      evt.target.bgColor = colorValue; //evt yerine event de yazsak aynı oluyor.
     }
 });
