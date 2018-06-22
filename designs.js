@@ -5,6 +5,7 @@ const height = document.querySelector("#inputHeight");
 const weight = document.querySelector("#inputWeight");
 const submit = document.querySelector("input[type=submit]");
 const table = document.querySelector("#pixelCanvas");
+const click = document.querySelectorAll('#pixelCanvas td');
   let colorValue;
   let heightValue;
   let weightValue;
@@ -28,13 +29,18 @@ function makeGrid() {
   for (let i = 0; i < heightValue ; i++) {
     const newRow = document.createElement("tr");
     table.appendChild(newRow);
-    for (let j = 0; j < weightValue; j++) {
-      const newD = document.createElement("td");
-      newRow.appendChild(newD);
+      for (let j = 0; j < weightValue; j++) {
+        const newD = document.createElement("td");
+        newRow.appendChild(newD);
       }
-    };
-  
-  console.log(colorValue,weightValue,heightValue);
-// Your code goes here!
+    }
+  };
 
-}
+  //click ile cell in background-color ı colorValue olacak
+
+  document.querySelector('#pixelCanvas').addEventListener('click', function (evt) {
+    if (evt.target.nodeName === 'TD') {  // ← verifies target is desired element
+      // set the cell to the picked color
+      event.target.bgColor = colorValue;
+    }
+});
