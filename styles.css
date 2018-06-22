@@ -1,9 +1,10 @@
 body {
     text-align: center;
+    font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 h1 {
-    font-family: Monoton;
+    font-family: 'Eater', cursive;
     font-size: 70px;
     margin: 0.2em;
 }
