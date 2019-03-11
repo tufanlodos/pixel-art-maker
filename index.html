@@ -8,25 +8,24 @@
 <body>
     <header>
     <h1>Pixel Art Maker</h1>
-    <p>Welcome! With this game, you can fill cells with the choosen color. Just click a cell in the grid!  For generate a grid, enter height and width values, choose a color and then click submit! When you want to reset, click Clear Canvas!  </p>
+    <p>Welcome! With this game, you can fill cells with the choosen color. Just click a cell in the grid!  For generate a grid, enter height and width values and then click submit! Whenever you want, you can change the color. When you want to reset, click Clear Canvas!  </p>
     </header>
     <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
+    <form id="size-picker">
         Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        <input type="number" id="input-height" name="height" min="1" value="1">
         Grid Width:
-        <input type="number" id="inputWeight" name="width" min="1" value="1">
+        <input type="number" id="input-weight" name="width" min="1" value="1">
         <input type="submit">
     </form>
 
     <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+    <input type="color" id="color-picker">
 
     <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
+    <table id="pixel-canvas"></table><br>
 
-    <input type="button" value="Clear Canvas" id="clearCanvas" onClick="window.location.reload()">
-
+    <input type="button" value="Clear Canvas" id="clear-canvas">
 
     <script src="designs.js"></script>
 </body>
